@@ -68,18 +68,43 @@
         </div>
     </main>
 
-    <footer class="border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 py-12 px-6">
-        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center text-center md:text-left">
-            <div>
-                <h3 class="font-black uppercase tracking-widest text-lg mb-2">Bundeswehr Roleplay</h3>
-                <p class="text-sm opacity-50">© 2026 Haloed Vertex - Alle Rechte vorbehalten.</p>
-            </div>
-            <div class="flex justify-center md:justify-end gap-6 font-bold uppercase text-xs tracking-[0.2em]">
-                <a href="https://discord.gg/CV9HMFYnA8" target="_blank" class="hover:text-blue-400 transition-colors">Discord</a>
-                <a href="https://www.roblox.com/communities/905362461/BW-Bundeswehr-Roleplay#!/about" target="_blank" class="hover:text-green-400 transition-colors">Roblox Gruppe</a>
-            </div>
+    <footer class="mt-auto border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 py-12 px-6">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+        
+        <div class="text-center md:text-left">
+            <h3 class="font-black uppercase tracking-widest text-lg mb-1">Bundeswehr Roleplay</h3>
+            <p class="text-[10px] opacity-40 font-bold uppercase tracking-tighter text-green-600">
+                Rein fiktives Community-Projekt • Keine Verbindung zur echten Bundeswehr
+            </p>
+            <p class="text-[10px] opacity-30 mt-1">© 2026 Haloed Vertex</p>
         </div>
-    </footer>
+
+        <div class="flex gap-8 items-center">
+            
+            <a href="https://discord.gg/CV9HMFYnA8" target="_blank" class="group flex flex-col items-center gap-2">
+                <div class="w-10 h-10 flex items-center justify-center bg-slate-100 dark:bg-slate-800 rounded-full group-hover:bg-[#5865F2] transition-all shadow-lg">
+                    <img src="https://www.svgrepo.com/show/353655/discord-icon.svg" class="w-5 h-5 dark:invert group-hover:invert-0" alt="Discord">
+                </div>
+                <span class="text-[10px] font-bold uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity">Discord</span>
+            </a>
+
+            <a href="https://www.roblox.com/communities/905362461/BW-Bundeswehr-Roleplay#!/about" target="_blank" class="group flex flex-col items-center gap-2">
+                <div class="w-10 h-10 flex items-center justify-center bg-slate-100 dark:bg-slate-800 rounded-full group-hover:bg-green-600 transition-all shadow-lg overflow-hidden">
+                    <img src="gruppe_logo.png" class="w-7 h-7 object-contain" alt="Roblox Gruppe">
+                </div>
+                <span class="text-[10px] font-bold uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity">Gruppe</span>
+            </a>
+
+            <a href="https://www.tiktok.com/@bwrp_rbxl" target="_blank" class="group flex flex-col items-center gap-2">
+                <div class="w-10 h-10 flex items-center justify-center bg-slate-100 dark:bg-slate-800 rounded-full group-hover:bg-black transition-all shadow-lg">
+                    <img src="https://www.svgrepo.com/show/333611/tiktok.svg" class="w-5 h-5 dark:invert group-hover:invert-0" alt="TikTok">
+                </div>
+                <span class="text-[10px] font-bold uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity">TikTok</span>
+            </a>
+
+        </div>
+    </div>
+</footer>
 
     <script>
         function toggleTheme() {
