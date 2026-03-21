@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="de" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credits | Bundeswehr Roleplay</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Roboto+Condensed:ital,wght@1,700;1,900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = { 
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        slate: { 950: '#0a0a0c', 900: '#121214' }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', sans-serif; transition: all 0.3s; }
+        .nav-krick-style { 
+            font-family: 'Roboto Condensed', sans-serif; 
+            font-weight: 900;
+            font-style: italic;
+            letter-spacing: 0.02em;
+        }
+        .banner-fade {
+            mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 60%, rgba(0,0,0,0) 100%);
+            -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 60%, rgba(0,0,0,0) 100%);
+        }
+        .social-box {
+            width: 44px;
+            height: 44px;
+            background-color: #000000;
+            border: 2px solid #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.2s;
+            overflow: hidden;
+        }
+        .social-box:hover { transform: scale(1.1); }
+        .social-box img { width: 100%; height: 100%; object-fit: cover; }
+        .credit-name {
+            font-family: 'Roboto Condensed', sans-serif;
+            font-weight: 900;
+            font-style: italic;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100 min-h-screen flex flex-col">
+
+    <header class="fixed top-0 w-full z-50 bg-white/10 dark:bg-black/40 backdrop-blur-md border-b border-white/10 p-4 px-8 flex justify-between items-center text-slate-900 dark:text-white">
+        <div class="flex items-center gap-4">
+            <img src="logo.png" alt="Logo" class="h-10 w-auto">
+        </div>
+        <nav class="hidden md:flex gap-12 items-center nav-krick-style uppercase text-[16px]">
+            <a href="index.html" class="hover:text-green-500 transition-colors">Startseite</a>
+            <a href="teams.html" class="hover:text-green-500 transition-colors">Teams</a>
+            <a href="regelwerk.html" class="hover:text-green-500 transition-colors">Regelwerk</a>
+            <a href="credits.html" class="text-green-500">Credits</a>
+        </nav>
+        <button onclick="toggleTheme()" class="bg-slate-800/50 p-2 rounded-full hover:bg-slate-700 transition-colors">
+            <span id="theme-icon">🌙</span>
+        </button>
+    </header>
+
+    <div class="relative w-full h-[40vh] overflow-hidden bg-black">
+        <img src="bwrp_banner.jpg" alt="Banner" class="w-full h-full object-cover banner-fade opacity-60">
+        <div class="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
+            <h1 class="text-4xl md:text-6xl font-black uppercase italic tracking-tighter text-white drop-shadow-2xl">Mitwirkende</h1>
+            <p class="text-green-500 font-bold uppercase tracking-[0.3em] text-sm mt-2 text-center">Das Team hinter dem Projekt</p>
+        </div>
+    </div>
+
+    <main class="max-w-6xl mx-auto px-6 -mt-12 relative z-10 flex-grow pb-20 w-full">
+        
+        <div class="mb-16">
+            <h2 class="text-sm font-black uppercase tracking-[0.5em] text-green-600 mb-6 text-center">Projektleitung</h2>
+            <div class="flex justify-center">
+                <div class="bg-white dark:bg-slate-900 p-8 rounded-3xl shadow-2xl border-2 border-green-600 w-full max-w-lg text-center">
+                    <div class="credit-name text-2xl md:text-3xl mb-1 text-slate-900 dark:text-white">@meerbii, @michi057299</div>
+                    <p class="text-xs font-bold uppercase tracking-widest opacity-50">Projektleitung & Gründer</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex flex-col md:flex-row justify-center gap-12">
+            
+            <div class="w-full md:w-1/2 max-w-md space-y-6">
+                <h3 class="text-xs font-black uppercase tracking-widest border-b border-white/10 pb-2 text-center md:text-left">Staff Team</h3>
+                
+                <div class="bg-white dark:bg-slate-900 p-6 rounded-2xl shadow-lg border border-slate-200 dark:border-white/5">
+                    <div class="credit-name text-xl text-slate-900 dark:text-white">@wgxks1_1</div>
+                    <p class="text-[10px] font-bold uppercase opacity-50">Teamverwaltung</p>
+                </div>
+
+                <div class="grid grid-cols-1 gap-3">
+                    <div class="bg-white/50 dark:bg-slate-900/50 p-4 rounded-xl border border-slate-200 dark:border-white/5">
+                        <div class="credit-name text-lg text-slate-800 dark:text-white/80">@mrmiral2</div>
+                        <p class="text-[9px] font-bold uppercase opacity-40 text-green-600">Junior Supporter</p>
+                    </div>
+                    <div class="bg-white/50 dark:bg-slate-900/50 p-4 rounded-xl border border-slate-200 dark:border-white/5">
+                        <div class="credit-name text-lg text-slate-800 dark:text-white/80">@felix_rettungsdienst</div>
+                        <p class="text-[9px] font-bold uppercase opacity-40 text-green-600">Junior Supporter</p>
+                    </div>
+                    <div class="bg-white/50 dark:bg-slate-900/50 p-4 rounded-xl border border-slate-200 dark:border-white/5">
+                        <div class="credit-name text-lg text-slate-800 dark:text-white/80">@lf12.12</div>
+                        <p class="text-[9px] font-bold uppercase opacity-40 text-green-600">Test Supporter</p>
+                    </div>
+                    <div class="bg-white/50 dark:bg-slate-900/50 p-4 rounded-xl border border-slate-200 dark:border-white/5">
+                        <div class="credit-name text-lg text-slate-800 dark:text-white/80">@ebuka_hat_das1</div>
+                        <p class="text-[9px] font-bold uppercase opacity-40 text-green-600">Test Supporter</p>
+                    </div>
+                    <div class="bg-white/50 dark:bg-slate-900/50 p-4 rounded-xl border border-slate-200 dark:border-white/5">
+                        <div class="credit-name text-lg text-slate-800 dark:text-white/80">@haloeddude</div>
+                        <p class="text-[9px] font-bold uppercase opacity-40 text-green-600">Test Supporter</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w-full md:w-1/2 max-w-md space-y-6">
+                <h3 class="text-xs font-black uppercase tracking-widest border-b border-white/10 pb-2 text-center md:text-left">Development</h3>
+                <div class="bg-white dark:bg-slate-900 p-6 rounded-2xl shadow-lg border border-slate-200 dark:border-white/5">
+                    <div class="credit-name text-xl text-slate-900 dark:text-white">@haloeddude</div>
+                    <p class="text-[10px] font-bold uppercase opacity-50">Test-Developer</p>
+                </div>
+                </div>
+
+        </div>
+
+        <div class="mt-20 bg-green-600/5 border border-green-600/20 p-8 rounded-3xl text-center">
+            <p class="italic opacity-70 text-sm">
+                Ein großes Dankeschön an alle, die täglich dazu beitragen, Bundeswehr Roleplay zu einer der authentischsten Erfahrungen auf Roblox zu machen.
+            </p>
+        </div>
+
+    </main>
+
+    <footer class="mt-auto border-t border-slate-200 dark:border-white/10 bg-white dark:bg-slate-900 py-12 px-8">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-10">
+            <div class="text-center md:text-left">
+                <h3 class="font-black uppercase tracking-widest text-lg mb-1">Bundeswehr Roleplay</h3>
+                <p class="text-[10px] opacity-60 font-bold uppercase tracking-tighter text-green-600">
+                    Rein fiktives Community-Projekt • Keine Verbindung zur echten Bundeswehr
+                </p>
+                <p class="text-[10px] opacity-40 mt-2">© 2026 Haloed Vertex</p>
+            </div>
+            <div class="flex gap-4 items-center">
+                <a href="https://www.tiktok.com/@bwrp_rbxl" target="_blank" class="social-box"><img src="tiktok.png" alt="TikTok"></a>
+                <a href="https://www.roblox.com/communities/905362461/BW-Bundeswehr-Roleplay" target="_blank" class="social-box"><img src="roblox.png" alt="Roblox"></a>
+                <a href="https://discord.gg/CV9HMFYnA8" target="_blank" class="social-box"><img src="discord.png" alt="Discord"></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleTheme() {
+            const html = document.documentElement;
+            const icon = document.getElementById('theme-icon');
+            if (html.classList.contains('dark')) {
+                html.classList.remove('dark'); icon.innerText = '☀️';
+            } else {
+                html.classList.add('dark'); icon.innerText = '🌙';
+            }
+        }
+    </script>
+</body>
+</html>

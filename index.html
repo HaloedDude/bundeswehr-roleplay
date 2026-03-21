@@ -5,104 +5,119 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bundeswehr Roleplay | Home</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
-    <script>tailwind.config = { darkMode: 'class' }</script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Roboto+Condensed:ital,wght@1,700;1,900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = { 
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        slate: { 950: '#0a0a0c', 900: '#121214' }
+                    }
+                }
+            }
+        }
+    </script>
     <style>
         body { font-family: 'Inter', sans-serif; transition: all 0.3s; }
-        .banner-fade {
-            mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 75%, rgba(0,0,0,0) 100%);
-            -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 75%, rgba(0,0,0,0) 100%);
+        .nav-krick-style { 
+            font-family: 'Roboto Condensed', sans-serif; 
+            font-weight: 900;
+            font-style: italic;
+            letter-spacing: 0.02em;
         }
+        .banner-fade {
+            mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 80%, rgba(0,0,0,0) 100%);
+            -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 80%, rgba(0,0,0,0) 100%);
+        }
+        .social-box {
+            width: 44px;
+            height: 44px;
+            background-color: #000000;
+            border: 2px solid #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.2s;
+            overflow: hidden;
+        }
+        .social-box:hover { transform: scale(1.1); }
+        .social-box img { width: 100%; height: 100%; object-fit: cover; }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100 min-h-screen flex flex-col">
 
-    <header class="fixed top-0 w-full z-50 bg-white/10 backdrop-blur-md border-b border-white/10 p-4 px-6 flex justify-between items-center">
-        <div class="font-black tracking-tighter uppercase text-xl">BWRP</div>
-        
-        <nav class="hidden md:flex gap-8 items-center font-bold uppercase tracking-widest text-sm">
-            <a href="index.html" class="text-green-500">Home</a>
+    <header class="fixed top-0 w-full z-50 bg-white/10 dark:bg-black/40 backdrop-blur-md border-b border-white/10 p-4 px-8 flex justify-between items-center">
+        <div class="flex items-center gap-4">
+            <img src="logo.png" alt="Logo" class="h-10 w-auto">
+        </div>
+        <nav class="hidden md:flex gap-12 items-center nav-krick-style uppercase text-[16px]">
+            <a href="index.html" class="text-green-500 hover:text-green-400 transition-colors">Startseite</a>
             <a href="teams.html" class="hover:text-green-500 transition-colors">Teams</a>
             <a href="regelwerk.html" class="hover:text-green-500 transition-colors">Regelwerk</a>
+            <a href="credits.html" class="hover:text-green-500 transition-colors">Credits</a>
         </nav>
-
-        <button onclick="toggleTheme()" class="bg-slate-800/50 p-2 rounded-full hover:scale-110 transition-all">
+        <button onclick="toggleTheme()" class="bg-slate-800/50 p-2 rounded-full hover:bg-slate-700 transition-colors">
             <span id="theme-icon">🌙</span>
         </button>
     </header>
 
-    <div class="relative w-full h-[60vh] overflow-hidden bg-black">
-        <img src="bwrp_banner2.jpg" alt="Banner" class="w-full h-full object-cover banner-fade opacity-90">
+    <div class="relative w-full h-[55vh] overflow-hidden bg-black">
+        <img src="bwrp_banner.jpg" alt="Banner" class="w-full h-full object-cover banner-fade opacity-90">
     </div>
 
-    <main class="max-w-4xl mx-auto px-6 -mt-20 relative z-10 flex-grow">
-        <div class="bg-white dark:bg-slate-900 p-10 rounded-3xl shadow-2xl border border-slate-200 dark:border-slate-800">
-            <h2 class="text-3xl font-black mb-6 uppercase italic tracking-tighter text-green-600">Über Bundeswehr Roleplay</h2>
-            <div class="space-y-6 opacity-80 leading-relaxed text-lg">
-    <p>
-        Willkommen bei <strong class="text-slate-900 dark:text-white">Bundeswehr Roleplay</strong> auf Roblox! Wir bieten eine engagierte und disziplinierte Simulation des militärischen Alltags innerhalb der Roblox-Plattform. In unserer Community steht das taktische Zusammenspiel und eine authentische Atmosphäre an oberster Stelle.
-    </p>
+    <main class="max-w-4xl mx-auto px-6 -mt-24 relative z-10 flex-grow w-full">
+        <div class="bg-white dark:bg-slate-900 p-10 rounded-3xl shadow-2xl border border-slate-200 dark:border-white/10">
+            <h2 class="text-3xl font-black mb-8 uppercase italic tracking-tighter text-green-600 border-b-2 border-green-600/20 pb-2 inline-block">Über Bundeswehr Roleplay</h2>
+            
+            <div class="space-y-8 opacity-95 leading-relaxed text-lg">
+                <p>
+                    Willkommen bei <strong class="text-slate-900 dark:text-white">Bundeswehr Roleplay</strong> auf Roblox! Wir bieten eine engagierte und disziplinierte Simulation des militärischen Alltags innerhalb der Roblox-Plattform. In unserer Community steht das taktische Zusammenspiel und eine authentische Atmosphäre an oberster Stelle.
+                </p>
 
-    <div class="p-6 bg-slate-100 dark:bg-slate-800/50 rounded-2xl border-l-4 border-green-600">
-        <h4 class="text-sm font-bold uppercase tracking-widest mb-2 text-green-600">Wichtiger Hinweis & Disclaimer</h4>
-        <p class="text-sm italic">
-            Dieses Projekt ist ein reines <strong class="text-slate-900 dark:text-white">Community-Fan-Game</strong> und steht in <strong class="text-slate-900 dark:text-white">keinerlei Verbindung zur echten Bundeswehr</strong> oder dem Bundesministerium für Verteidigung. Alle Inhalte dienen ausschließlich der Unterhaltung und Simulation im Rahmen der Roblox-Nutzungsbedingungen. 
-        </p>
-        <p class="text-sm italic mt-2">
-            Wir legen großen Wert auf Originalität: Unser Konzept, unsere Strukturen und unsere Umsetzung sind <strong class="text-slate-900 dark:text-white">eigenständige Entwicklungen</strong>. Bundeswehr Roleplay verfolgt nicht die Absicht, andere existierende Simulationen oder Roleplay-Projekte zu kopieren. Wir distanzieren uns ausdrücklich von Plagiaten und setzen auf eine einzigartige Community-Erfahrung.
-        </p>
-    </div>
+                <div class="p-8 bg-green-900/5 dark:bg-green-600/5 rounded-2xl border-2 border-green-600 shadow-lg shadow-green-600/10">
+                    <h4 class="text-lg font-black uppercase tracking-widest mb-4 text-green-600 flex items-center gap-2">
+                        Wichtiger Hinweis & Disclaimer
+                    </h4>
+                    <div class="space-y-4 text-sm md:text-base italic text-slate-700 dark:text-slate-300">
+                        <p>
+                            Dieses Projekt ist ein reines <strong class="text-slate-900 dark:text-white">Community-Fan-Game</strong> und steht in <strong class="text-slate-900 dark:text-white">keinerlei Verbindung zur echten Bundeswehr</strong> oder dem Bundesministerium für Verteidigung. Alle Inhalte dienen ausschließlich der Unterhaltung und Simulation im Rahmen der Roblox-Nutzungsbedingungen. 
+                        </p>
+                        <p>
+                            Wir legen großen Wert auf Originalität: Unser Konzept, unsere Strukturen und unsere Umsetzung sind <strong class="text-slate-900 dark:text-white">eigenständige Entwicklungen</strong>. Bundeswehr Roleplay verfolgt nicht die Absicht, andere existierende Simulationen oder Roleplay-Projekte zu kopieren. Wir distanzieren uns ausdrücklich von Plagiaten und setzen auf eine einzigartige Community-Erfahrung.
+                        </p>
+                    </div>
+                </div>
 
-    <p>
-        Ob als Feldjäger, in der Logistik oder im Wachbataillon, bei uns findet jeder seinen Platz. Starte noch heute deine Karriere in einer Umgebung, die auf Respekt und Teamgeist aufbaut.
-    </p>
-</div>
+                <p>
+                    Ob als Feldjäger, in der Logistik oder im Wachbataillon, bei uns findet jeder seinen Platz. Starte noch heute deine Karriere in einer Umgebung, die auf Respekt und Teamgeist aufbaut.
+                </p>
+            </div>
 
-            <div class="mt-10">
-                <a href="https://www.roblox.com/games/96493783341704/Bundeswehr-Roleplay" target="_blank" class="inline-block bg-green-600 hover:bg-green-500 text-white font-black py-4 px-8 rounded-xl uppercase tracking-widest transition-all hover:shadow-[0_0_20px_rgba(34,197,94,0.5)]">
+            <div class="mt-12">
+                <a href="https://www.roblox.com/games/96493783341704/Bundeswehr-Roleplay" target="_blank" class="inline-block bg-green-600 hover:bg-green-500 text-white font-black py-5 px-10 rounded-xl uppercase tracking-widest transition-all shadow-xl shadow-green-900/40 hover:-translate-y-1">
                     Jetzt Dienst antreten!
                 </a>
             </div>
         </div>
     </main>
 
-    <footer class="mt-auto border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 py-12 px-6">
-    <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
-        
-        <div class="text-center md:text-left">
-            <h3 class="font-black uppercase tracking-widest text-lg mb-1">Bundeswehr Roleplay</h3>
-            <p class="text-[10px] opacity-40 font-bold uppercase tracking-tighter text-green-600">
-                Rein fiktives Community-Projekt • Keine Verbindung zur echten Bundeswehr
-            </p>
-            <p class="text-[10px] opacity-30 mt-1">© 2026 Haloed Vertex</p>
+    <footer class="mt-32 border-t border-slate-200 dark:border-white/10 bg-white dark:bg-slate-900 py-12 px-8">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-10">
+            <div class="text-center md:text-left">
+                <h3 class="font-black uppercase tracking-widest text-lg mb-1">Bundeswehr Roleplay</h3>
+                <p class="text-[10px] opacity-60 font-bold uppercase tracking-tighter text-green-600">
+                    Rein fiktives Community-Projekt • Keine Verbindung zur echten Bundeswehr
+                </p>
+                <p class="text-[10px] opacity-40 mt-2">© 2026 Haloed Vertex</p>
+            </div>
+            <div class="flex gap-4 items-center">
+                <a href="https://www.tiktok.com/@bwrp_rbxl" target="_blank" class="social-box"><img src="tiktok.png" alt="TikTok"></a>
+                <a href="https://www.roblox.com/communities/905362461/BW-Bundeswehr-Roleplay" target="_blank" class="social-box"><img src="roblox.png" alt="Roblox"></a>
+                <a href="https://discord.gg/CV9HMFYnA8" target="_blank" class="social-box"><img src="discord.png" alt="Discord"></a>
+            </div>
         </div>
-
-        <div class="flex gap-8 items-center">
-            
-            <a href="https://discord.gg/CV9HMFYnA8" target="_blank" class="group flex flex-col items-center gap-2">
-                <div class="w-10 h-10 flex items-center justify-center bg-slate-100 dark:bg-slate-800 rounded-full group-hover:bg-[#5865F2] transition-all shadow-lg">
-                    <img src="https://www.svgrepo.com/show/353655/discord-icon.svg" class="w-5 h-5 dark:invert group-hover:invert-0" alt="Discord">
-                </div>
-                <span class="text-[10px] font-bold uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity">Discord</span>
-            </a>
-
-            <a href="https://www.roblox.com/communities/905362461/BW-Bundeswehr-Roleplay#!/about" target="_blank" class="group flex flex-col items-center gap-2">
-                <div class="w-10 h-10 flex items-center justify-center bg-slate-100 dark:bg-slate-800 rounded-full group-hover:bg-green-600 transition-all shadow-lg overflow-hidden">
-                    <img src="gruppe_logo.png" class="w-7 h-7 object-contain" alt="Roblox Gruppe">
-                </div>
-                <span class="text-[10px] font-bold uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity">Gruppe</span>
-            </a>
-
-            <a href="https://www.tiktok.com/@bwrp_rbxl" target="_blank" class="group flex flex-col items-center gap-2">
-                <div class="w-10 h-10 flex items-center justify-center bg-slate-100 dark:bg-slate-800 rounded-full group-hover:bg-black transition-all shadow-lg">
-                    <img src="https://www.svgrepo.com/show/333611/tiktok.svg" class="w-5 h-5 dark:invert group-hover:invert-0" alt="TikTok">
-                </div>
-                <span class="text-[10px] font-bold uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity">TikTok</span>
-            </a>
-
-        </div>
-    </div>
-</footer>
+    </footer>
 
     <script>
         function toggleTheme() {
