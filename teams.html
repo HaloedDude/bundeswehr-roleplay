@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="de" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teams | Bundeswehr Roleplay</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <script>tailwind.config = { darkMode: 'class' }</script>
+    <style>
+        body { font-family: 'Inter', sans-serif; transition: all 0.3s; }
+        .banner-fade {
+            mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 60%, rgba(0,0,0,0) 100%);
+            -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 60%, rgba(0,0,0,0) 100%);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100 min-h-screen flex flex-col">
+
+    <header class="fixed top-0 w-full z-50 bg-white/10 backdrop-blur-md border-b border-white/10 p-4 px-6 flex justify-between items-center">
+        <div class="font-black tracking-tighter uppercase text-xl">BWRP</div>
+        
+        <nav class="hidden md:flex gap-8 items-center font-bold uppercase tracking-widest text-sm">
+            <a href="index.html" class="hover:text-green-500 transition-colors">Home</a>
+            <a href="teams.html" class="text-green-500">Teams</a>
+            <a href="regelwerk.html" class="hover:text-green-500 transition-colors">Regelwerk</a>
+        </nav>
+
+        <button onclick="toggleTheme()" class="bg-slate-800/50 p-2 rounded-full hover:scale-110 transition-all">
+            <span id="theme-icon">🌙</span>
+        </button>
+    </header>
+
+    <div class="relative w-full h-[40vh] overflow-hidden bg-black">
+        <img src="bwrp_banner2.jpg" alt="Banner" class="w-full h-full object-cover banner-fade opacity-70">
+        <div class="absolute inset-0 flex items-center justify-center">
+            <h1 class="text-4xl md:text-6xl font-black uppercase italic tracking-tighter text-white drop-shadow-2xl">Unsere Teams</h1>
+        </div>
+    </div>
+
+    <main class="max-w-6xl mx-auto px-6 -mt-10 relative z-10 flex-grow pb-20">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            
+            <div class="bg-white dark:bg-slate-900 p-8 rounded-3xl shadow-xl border border-slate-200 dark:border-slate-800 hover:border-green-600 transition-all">
+                <div class="text-3xl mb-4">⚖️</div>
+                <h2 class="text-2xl font-black uppercase italic tracking-tighter mb-2">Feldjäger</h2>
+                <p class="opacity-70 text-sm leading-relaxed">Die Militärpolizei der Bundeswehr. Zuständig für Ordnung, Sicherheit und die Einhaltung der Dienstvorschriften innerhalb der Bundeswehr.</p>
+            </div>
+
+            <div class="bg-white dark:bg-slate-900 p-8 rounded-3xl shadow-xl border border-slate-200 dark:border-slate-800 hover:border-red-600 transition-all">
+                <div class="text-3xl mb-4">🏥</div>
+                <h2 class="text-2xl font-black uppercase italic tracking-tighter mb-2">Sanitätsdienst</h2>
+                <p class="opacity-70 text-sm leading-relaxed">Die medizinische Versorgung im Feld. Die Sanitäter retten Leben und stellen die Einsatzbereitschaft der Truppe sicher.</p>
+            </div>
+
+            <div class="bg-white dark:bg-slate-900 p-8 rounded-3xl shadow-xl border border-slate-200 dark:border-slate-800 hover:border-blue-600 transition-all">
+                <div class="text-3xl mb-4">🚛</div>
+                <h2 class="text-2xl font-black uppercase italic tracking-tighter mb-2">Logistik</h2>
+                <p class="opacity-70 text-sm leading-relaxed">Das Rückgrat der Armee. Zuständig für den Transport von Material, Verpflegung und die Instandsetzung von Fahrzeugen.</p>
+            </div>
+
+            <div class="bg-white dark:bg-slate-900 p-8 rounded-3xl shadow-xl border border-slate-200 dark:border-slate-800 hover:border-slate-500 transition-all">
+                <div class="text-3xl mb-4">🛡️</div>
+                <h2 class="text-2xl font-black uppercase italic tracking-tighter mb-2">Wachbataillon</h2>
+                <p class="opacity-70 text-sm leading-relaxed">Repräsentation und Schutz. Das Wachbataillon sichert wichtige Einrichtungen und führt das Protokoll bei feierlichen Anlässen aus.</p>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 py-12 px-6">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center text-center md:text-left">
+            <div>
+                <h3 class="font-black uppercase tracking-widest text-lg mb-2">Bundeswehr Roleplay</h3>
+                <p class="text-sm opacity-50">© 2026 Haloed Vertex - Alle Rechte vorbehalten.</p>
+            </div>
+            <div class="flex justify-center md:justify-end gap-6 font-bold uppercase text-xs tracking-[0.2em]">
+                <a href="https://discord.gg/CV9HMFYnA8" target="_blank" class="hover:text-blue-400 transition-colors">Discord</a>
+                <a href="https://www.roblox.com/communities/905362461/BW-Bundeswehr-Roleplay#!/about" target="_blank" class="hover:text-green-400 transition-colors">Roblox Gruppe</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleTheme() {
+            const html = document.documentElement;
+            const icon = document.getElementById('theme-icon');
+            if (html.classList.contains('dark')) {
+                html.classList.remove('dark'); icon.innerText = '☀️';
+            } else {
+                html.classList.add('dark'); icon.innerText = '🌙';
+            }
+        }
+    </script>
+</body>
+</html>
